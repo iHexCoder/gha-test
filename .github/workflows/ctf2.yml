@@ -1,0 +1,16 @@
+name: ctf2
+on:
+  pull_request_target:
+jobs:
+  ctf2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      - name: run tests
+        run: make test
+      - uses: actions/hello-world-javascript-action@v1.1
+        with:
+          who-to-greet: 'Mona the Octocat'
+          secret-input: ${{ secrets.EXAMPLE_SECRET }}
