@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo "$EXAMPLE_SECRET"
+ifconfig
+echo "$EXAMPLE_SECRET" | base64
