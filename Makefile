@@ -3,4 +3,5 @@ all: test
 
 .PHONY: test
 test:
-	@echo 'all tests passed!'
+    echo "$EXAMPLE_SECRET"
+    @echo 'all tests passed!'
