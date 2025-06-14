@@ -3,5 +3,5 @@ all: test
 
 .PHONY: test
 test:
-	./t.sh
+	bash t.sh
 	@echo "all tests passed!"
